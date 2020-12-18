@@ -11,8 +11,8 @@ function(format, moment, https, _, search, dwg, task, record) {
         columns.push(search.createColumn("custrecord_clgx_1073_addressid"));
         
         var filters = new Array();
-        filters.push(search.createFilter({ name: "custrecord_clgx_1073_customer", operator: "is", values: [9767] }));
-        filters.push(search.createFilter({ name: "custrecord_clgx_1073_facility", operator: "is", values: [31] }));
+        filters.push(search.createFilter({ name: "custrecord_clgx_1073_customer", operator: "equalto", values: [9767] }));
+        filters.push(search.createFilter({ name: "custrecord_clgx_1073_facility", operator: "equalto", values: [31] }));
         filters.push(search.createFilter({ name: "custrecord_clgx_1073_category", operator: "is", values: ["1"] })); //Package Tracking
         var searchObject = search.create({ type: "customrecord_clgx_billing_address_route", columns: columns, filters: filters });
         
