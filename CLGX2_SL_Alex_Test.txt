@@ -17,7 +17,7 @@ function(format, moment, https, _, search, dwg, task, record) {
         var searchObject = search.create({ type: "customrecord_clgx_billing_address_route", columns: columns, filters: filters });
         
         searchObject.run().each(function(result) {
-        	log.debug({ title: "", details: result.getValue("") });
+        	log.debug({ title: "", details: result.getValue("custrecord_clgx_1073_addressid") });
         	return true;
         });
         
